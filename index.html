@@ -1,7 +1,427 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Павел Гореликов - Инженер по нагрузочному тестированию</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .about {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .focus-block {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .focus-block strong {
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .job:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .job h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+        
+        .job .company {
+            color: #667eea;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .job .period {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .job ul {
+            list-style-position: inside;
+            color: #555;
+        }
+        
+        .job li {
+            margin-bottom: 8px;
+            padding-left: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 6px 0;
+            color: #555;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header .subtitle {
+                font-size: 1em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <div class="header">
+            <h1>Павел Гореликов</h1>
+            <div class="subtitle">Инженер по нагрузочному тестированию / Системный администратор Linux</div>
+            <div class="contact-info">
+                <div class="contact-item">📧 pavop02@gmail.com</div>
+                <div class="contact-item">📱 +7 (900) 925-30-15</div>
+                <div class="contact-item">📍 Воронеж</div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item"><a href="https://github.com/hopsayer/" style="color: white; text-decoration: none;">🔗 GitHub</a></div>
+                <div class="contact-item"><a href="https://dev.to/hopsayer" style="color: white; text-decoration: none;">📝 Dev.to</a></div>
+                <div class="contact-item"><a href="https://t.me/hopsayer" style="color: white; text-decoration: none;">💬 Telegram</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>О себе</h2>
+                <div class="about">
+                    Системный администратор Linux с опытом в нагрузочном тестировании, мониторинге производительности и автоматизации процессов. Специализируюсь на построении мониторинговых систем, диагностике производительности и создании комплексных тестовых сценариев.
+                    
+                    <div class="focus-block">
+                        <strong>Текущий фокус:</strong> Нагрузочное тестирование и Performance Engineering. Активно развиваю компетенции в JMeter, мониторинге производительности (Grafana/InfluxDB/Telegraf) и DevOps-инфраструктуре. Ищу позицию инженера по нагрузочному тестированию для применения накопленного технического опыта.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Профессиональный опыт</h2>
+                
+                <div class="job">
+                    <h3>Самообучение: Нагрузочное тестирование и DevOps</h3>
+                    <div class="period">Январь 2024 — настоящее время</div>
+                    <p style="margin-bottom: 15px;"><strong>Систематическое изучение и pet-проекты</strong></p>
+                    
+                    <p><strong>Нагрузочное тестирование:</strong></p>
+                    <ul>
+                        <li><strong>JMeter:</strong> создание сложных сценариев, настройка таймеров и пейсинга, параметризация через CSV, полный цикл НТ</li>
+                        <li><strong>Анализ трафика:</strong> Fiddler, mitmproxy, Wireshark для детального анализа HTTP/HTTPS</li>
+                        <li>Углубленное понимание протоколов HTTP/HTTPS, TCP/IP</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px;"><strong>Мониторинг и аналитика:</strong></p>
+                    <ul>
+                        <li>Grafana + InfluxDB + Telegraf - полный стек визуализации метрик</li>
+                        <li>InfluxQL, Netdata, Prometheus для диагностики производительности</li>
+                        <li>Bash-скрипты для системного мониторинга</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px;"><strong>DevOps инфраструктура:</strong></p>
+                    <ul>
+                        <li>Docker, Docker Compose - контейнеризация тестовых сред</li>
+                        <li>OpenShift, Kubernetes - базовый уровень</li>
+                        <li>Jenkins - базовое использование CI/CD</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>Инженер технической поддержки хостинга, 2-я линия</h3>
+                    <div class="company">Рунити (nic.ru)</div>
+                    <div class="period">Ноябрь 2024 — Март 2025 (5 месяцев)</div>
+                    <ul>
+                        <li>Настройка и диагностика DNS-серверов (A, AAAA, CNAME, MX, TXT, SPF, DKIM, DMARC)</li>
+                        <li>Администрирование веб-серверов Apache и Nginx, панелей управления (Plesk, ISPManager, cPanel)</li>
+                        <li>Настройка SSL/TLS сертификатов, систем защиты (Fail2ban, iptables, UFW)</li>
+                        <li>Администрирование почтовых серверов (Exim, Postfix, Dovecot) и протоколов SMTP/POP3/IMAP</li>
+                        <li>Работа с MySQL, MariaDB, PostgreSQL - оптимизация производительности</li>
+                        <li>Использование сетевых утилит: dig, nslookup, traceroute, MTR, tcpdump, netstat, ss, lsof</li>
+                        <li>Анализ трафика с помощью Fiddler и Wireshark</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>Инженер тех. сопровождения / Тестировщик ПО</h3>
+                    <div class="company">ИРКОС</div>
+                    <div class="period">Ноябрь 2023 — Февраль 2024 (4 месяца)</div>
+                    <ul>
+                        <li>Установка и настройка ОС (Windows, Linux), оптимизация устройств</li>
+                        <li>Интеграция Linux-систем в Windows-домен (Kerberos, Active Directory)</li>
+                        <li>Настройка и документирование корпоративной сети, тестирование безопасности</li>
+                        <li>Организация удаленного доступа через RDP с Linux (OpenVPN, AnyConnect, VNC)</li>
+                        <li>Тестирование программного обеспечения радиоаппаратуры</li>
+                        <li>Создание багрепортов через XMind, TestRail и YouTrack</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Ключевые навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Нагрузочное тестирование</h3>
+                        <ul>
+                            <li>JMeter (полный цикл НТ)</li>
+                            <li>Fiddler, mitmproxy, Wireshark</li>
+                            <li>HTTP/HTTPS, TCP/IP</li>
+                            <li>Jenkins (базовый)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Мониторинг</h3>
+                        <ul>
+                            <li>Grafana, InfluxDB, InfluxQL</li>
+                            <li>Telegraf, Netdata, Prometheus</li>
+                            <li>Bash-скрипты мониторинга</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Linux & Сети</h3>
+                        <ul>
+                            <li>Arch, Debian/Ubuntu, RHEL/CentOS</li>
+                            <li>iptables, UFW, DNS, SSH/SCP/FTP</li>
+                            <li>netstat, ss, lsof, systemctl</li>
+                            <li>OpenVPN, strongSwan, AnyConnect</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>DevOps & Автоматизация</h3>
+                        <ul>
+                            <li>Docker, Docker Compose</li>
+                            <li>Kubernetes (базовый)</li>
+                            <li>Python, Bash scripting</li>
+                            <li>Git/GitHub, RegEx</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Базы данных</h3>
+                        <ul>
+                            <li>PostgreSQL (базовый)</li>
+                            <li>MySQL, MariaDB</li>
+                            <li>DBeaver, SQL запросы</li>
+                            <li>Оптимизация производительности</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Веб-технологии</h3>
+                        <ul>
+                            <li>Apache, Nginx</li>
+                            <li>WordPress, Joomla, Bitrix</li>
+                            <li>Plesk, ISPManager, cPanel</li>
+                            <li>SSL/TLS сертификаты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Образование</h2>
+                <div class="job">
+                    <h3>Воронежский государственный технический университет</h3>
+                    <div class="company">Радиотехнический факультет</div>
+                    <div class="period">2018-2024</div>
+                    <p>Специальность: Радиоэлектронные системы</p>
+                    <ul>
+                        <li>Волонтерская IT-поддержка университета: системное администрирование, настройка сетевой инфраструктуры</li>
+                        <li>Углубленное изучение Linux-систем в рамках самостоятельной практики</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Языки</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div class="badge">Русский: Родной</div>
+                    <div class="badge">Английский: B2-C1 (Upper-Intermediate)</div>
+                </div>
+                <p style="margin-top: 15px; color: #555;">Свободное чтение технической документации, общение без подготовки, понимание американского и международного английского</p>
+            </div>
+
+            <div class="section">
+                <h2>Open Source</h2>
+                <ul style="list-style-position: inside;">
+                    <li>Контрибьюции в open-source проекты</li>
+                    <li>Баг-репорты и помощь пользователям</li>
+                    <li>Написание технических статей и инструкций</li>
+                    <li>GitHub: <a href="https://github.com/hopsayer/">github.com/hopsayer</a></li>
+                    <li>Dev.to: <a href="https://dev.to/hopsayer">dev.to/hopsayer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Обновлено: Октябрь 2025 | <a href="https://github.com/hopsayer/">GitHub</a> | <a href="https://t.me/hopsayer">Telegram</a></p>
+        </div>
+    </div>
 </body>
 </html>
